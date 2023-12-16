@@ -1,11 +1,10 @@
-import React from "react";
-import logo from "./logo.svg";
 import { PostsFeed } from "./modules/posts/ui/posts-feed/posts-feed";
+import "./assets/styles/global.css";
 
 function App() {
   return (
     <div className="App">
-      <header>Posts Feed</header>
+      <header className="text-xl font-bold">Posts Feed</header>
       <PostsFeed />
     </div>
   );
