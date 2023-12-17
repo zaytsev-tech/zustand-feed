@@ -1,3 +1,5 @@
+import { useClasses } from "./domain/use-classes";
+
 type PostProps = {
   userId: string;
   title: string;
@@ -5,10 +7,12 @@ type PostProps = {
 };
 
 export const Post = ({ userId, title, body }: PostProps) => {
+  const { rootClassnames, titleClassnames, bodyClassnames } = useClasses();
+
   return (
-    <div className="container mx-auto mb-3 p-3 rounded-md border-solid border-2 border-sky-500 text-lg font-bold">
-      <h4 className="text-black font-semibold font-bold">{title}</h4>
-      <p className="text-slate-500 font-medium">{body}</p>
+    <div className={rootClassnames}>
+      <h4 className={titleClassnames}>{title}</h4>
+      <p className={bodyClassnames}>{body}</p>
     </div>
   );
 };
